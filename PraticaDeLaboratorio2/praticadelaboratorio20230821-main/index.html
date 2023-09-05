@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="">
+        <label for="pront">Prontuário: </label>
+        <input type="text" id="pront">
+        <br><br>
+        <label for="name">Nome: </label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="email">E-mail Institucional: </label>
+        <input type="email" name="" id="email">
+        <br><br>
+        <select name="" id="curso">
+            <option value="TI1">Informática Básica</option>
+            <option value="Ele">Técnico em Eletrônica</option>
+            <option value="Aut">Técnico em Automação Industrial</option>
+            <option value="Eve">Técnico em Eventos</option>
+            <option value="TI2">Técnico em Informática</option>
+        </select>
+        <br><br>
+        <label for="">Período: </label><br>
+        <input type="radio" name="per" id="man" value="m">
+        <label for="man">Manhã </label>
+        <input type="radio" name="per" id="tar" value="t">
+        <label for="tar">Tarde </label>
+        <input type="radio" name="per" id="noi" value="n">
+        <label for="noi">Noite </label>
+        <br><br>
+        <label for="data">Data ingresso: </label>
+        <input type="date" id="data">
+        <br><br>
+        <label for="">Extensão</label><br>
+        <input type="checkbox" name="" id="mus">
+        <label for="mus">Música</label><br>
+        <input type="checkbox" name="" id="pin">
+        <label for="pin">Pintura</label><br>
+        <input type="checkbox" name="" id="tea">
+        <label for="tea">Teatro</label>
+        <br><br>
+        <label for="est">Nível de satisfação: </label>
+        <input type="range" name="" id="sat">
+        <br><br>
+        <input type="button" value="Enviar" onclick="Enviar()">
+    </form>
+    <table></table>
+    <script src="script.js"></script>
+</body>
+</html>
