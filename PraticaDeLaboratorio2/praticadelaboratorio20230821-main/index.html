@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
+    <form name="frmDados">
+
         <label for="pront">Prontuário: </label>
-        <input type="text" id="pront">
+        <input type="text" id="pront" name="pront">
         <br><br>
+
         <label for="name">Nome: </label>
-        <input type="text" id="name">
+        <input type="text" id="name" name="name">
         <br><br>
+
         <label for="email">E-mail Institucional: </label>
-        <input type="email" name="" id="email">
+        <input type="email" name="" id="email" name="email">
         <br><br>
-        <select name="" id="curso">
+
+        <select name="" id="curso" name="curso">
             <option value="Informática Básica">Informática Básica</option>
             <option value="Técnico em Eletrônica">Técnico em Eletrônica</option>
             <option value="Técnico em Automação Industrial">Técnico em Automação Industrial</option>
@@ -25,27 +29,31 @@
             <option value="Técnico em Informática">Técnico em Informática</option>
         </select>
         <br><br>
+
         <label for="">Período: </label><br>
-        <input type="radio" name="per" id="man" value="m">
+        <input type="radio" name="per" id="man"  value="m">
         <label for="man">Manhã </label>
-        <input type="radio" name="per" id="tar" value="t">
+        <input type="radio" name="per" id="tar"  value="t">
         <label for="tar">Tarde </label>
-        <input type="radio" name="per" id="noi" value="n">
+        <input type="radio" name="per" id="noi"  value="n">
         <label for="noi">Noite </label>
         <br><br>
+
         <label for="data">Data ingresso: </label>
         <input type="date" id="data">
         <br><br>
+
         <label for="">Extensão</label><br>
-        <input type="checkbox" name="" id="mus">
+        <input type="checkbox" name="interesse1" value="música" id="mus">
         <label for="mus">Música</label><br>
-        <input type="checkbox" name="" id="pin">
+        <input type="checkbox" name="interesse2" value="pintura" id="pin">
         <label for="pin">Pintura</label><br>
-        <input type="checkbox" name="" id="tea">
+        <input type="checkbox" name="interesse3" value="teatro" id="tea">
         <label for="tea">Teatro</label>
         <br><br>
+
         <label for="est">Nível de satisfação: </label>
-        <input type="range" name="" id="sat">
+        <input type="range" name="sat" id="sat">
         <br><br>
         <input type="button" value="Enviar" onclick="Enviar()">
         <input type="reset" value="Limpar">
