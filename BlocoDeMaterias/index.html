@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function media (name) {
+            s = 0
+            for (c = 1; c < 4; c++) {
+                n = prompt(`Digite sua ${c}° nota de ${name}`)
+                s += Number(n)
+            }
+            return s
+        }
+
+        mat = media("Matemática")
+        bio = media("Biologia")
+        geo = media("Geografia")
+        his = media("História")
+        pl = media("Prática de Laboratório")
+        lp = media("Linguagem de Programação")
+        alg = media("Algoritimo")
+        sis = media("Sistemas computacionais")
+        por = media("Portugues")
+        ing = media("Inglês")
+        esp = media("Espanhol")
+        art = media("Artes")
+        edf = media("Educação Física")
+
+        if(mat >= 24) {
+            document.write("Você passou em matemática <br>")
+        } else {
+            document.write(`Você precisa de ${24-mat} em matemática nos bimestres faltando pra passar <br>`)
+        }
+
+        if(bio >= 24) {
+            document.write("Você passou em biologia <br>")
+        } else {
+            document.write(`Você precisa de ${24-bio} em biologia nos bimestres faltando pra passar <br>`)
+        }
+
+        if((his + geo) >= 48) {
+            document.write("Você passou em Ciencias Humanas <br>")
+        } else {
+            document.write(`Você precisa de ${48-his-geo} em Ciencias Humanas nos bimestres faltando pra passar <br>`)
+        }
+
+        if((pl + lp + alg + sis) >= 96) {
+            document.write("Você passou em Ensino Técnico <br>")
+        } else {
+            document.write(`Você precisa de ${96-pl-lp-alg-sis} em Ensino técncio nos bimestres faltando pra passar <br>`)
+        }
+
+        if((por + esp + ing + edf + art) >= 120) {
+            document.write("Você passou em Linguagens <br>")
+        } else {
+            document.write(`Você precisa de ${120- por - esp - ing - edf - art} em Linguagens nos bimestres faltando pra passar <br>`)
+        }
+
+
+    </script>
+</body>
+</html>

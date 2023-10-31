@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptogrfafia</title>
+    <style>
+        p {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <form name="Formulario">
+        Mensagem Aberta: <input type="text" id="Aberta" placeholder="Informe a mensagem aberta"><br>
+        Mensagem Criptografada: <input type="text" id="Criptografada" placeholder="Informe a mensagem criptografada"><br>
+        <input type="button" value="Criptografar" onclick="criptografar();">
+        <input type="button" value="Descriptografar" onclick="descriptografar();">
+
+        <p></p>
+    </form>
+    <script>
+        
+
+
+        function criptografar() {
+            var p = document.querySelector("p");
+            var aberta = document.getElementById("Aberta").value
+            var n = 5
+
+            var mCri = "";
+            for (var c =0; c< aberta.length; c++) {
+                var cc = aberta.charCodeAt(c)
+                var ecc = cc + n
+                mCri += String.fromCharCode(ecc)
+
+            }
+
+            
+            p.innerHTML = mCri         
+            
+        }
+
+        function descriptografar() {
+            var p = document.querySelector("p");
+            var crip = document.getElementById("Criptografada").value
+            var n = 5
+            var mAberta = ""
+            for (var c =0; c< crip.length; c++) {
+                var cc = crip.charCodeAt(c)
+                var dcc = cc - n
+                mAberta += String.fromCharCode(dcc)
+            }
+            p.innerHTML = mAberta  
+        }
+    </script>
+</body>
+</html>

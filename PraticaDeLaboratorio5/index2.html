@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        td {
+            padding: 4px;
+            border: 1px solid black;
+        }
+
+        main {
+            background-color: aquamarine;
+            margin: auto;
+            width: 50vw;
+            height: 100vh;
+            text-align: center;
+            padding-top: 10vh;
+        }
+        
+        input {
+            border-radius: 10px;
+            margin-bottom: 5vh;
+            width: 25vw;
+            height: 5vh;
+        }
+
+        td {
+            width: 2vw;
+            height: 2vw;
+
+            
+        }
+
+        table {
+            margin-left: 24vw;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <label for="c">Caracter: </label>
+            <input type="text" id="c">
+            <br>
+            <label for="n">Número: </label>
+            <input type="number" name="" id="n">
+            <br>
+            <input type="button" value="Pronto" onclick="Pronto()">
+        </form>
+
+        <table></table>
+
+        <script>
+            function Pronto() {
+                table = document.querySelector("table")
+                car = document.getElementById("c").value
+                num = document.getElementById("n").value
+
+                table.innerHTML = ""
+                var c = 0
+                for (c; c < num; c++) {
+
+                    table.innerHTML += `<td>${car}</td>`
+                }
+            }
+        </script>
+    </main>
+</body>
+
+</html>

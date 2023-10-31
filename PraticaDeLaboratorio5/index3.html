@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            margin-bottom: 5vh;
+        }
+
+        input {
+            border-radius: 10px;
+        }
+
+
+
+        td {
+            border: 1px solid black;
+            min-width: 50px;
+        }
+
+        main {
+            width: 50vw;
+            margin: auto;
+            text-align: center;
+            background-color: aquamarine;
+            padding-top: 10vh;
+            height: 100vh;
+        }
+
+        table {
+            width: 25vw;
+            margin-left: 12.5vw;
+        }
+
+        #b {
+            width: 60px;
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <label for="s">String: </label>
+            <input type="text" id="s">
+            <input id="b" type="button" value="Ver" onclick="Ver()">
+        </form>
+
+        <table>
+            <tr>
+                <td>Vogais: </td>
+                <td id="v"></td>
+            </tr>
+            <tr>
+                <td>Consoantes: </td>
+                <td id="c"></td>
+            </tr>
+            <tr>
+                <td>Dígitos: </td>
+                <td id="d"></td>
+            </tr>
+            <tr>
+                <td>Outros: </td>
+                <td id="o"></td>
+            </tr>
+        </table>
+
+        <script>
+            function Ver() {
+                s = document.getElementById("s").value
+
+
+                vog = document.getElementById("v")
+                con = document.getElementById("c")
+                dig = document.getElementById("d")
+                out = document.getElementById("o")
+                var cv = 0
+                var cc = 0
+                var cd = 0
+                var co = 0
+                var c = 0
+                var n = s.length
+
+                for (c = 0; c < n; c++) {
+                    if (s.charAt(c) == "a" || s.charAt(c) == "e" || s.charAt(c) == "i" || s.charAt(c) == "o" || s.charAt(c) == "u" || s.charAt(c) == "A" || s.charAt(c) == "E" || s.charAt(c) == "I" || s.charAt(c) == "O" || s.charAt(c) == "u") {
+                        cv++
+                    } else if (s.charAt(c) == "b" || s.charAt(c) == "c" || s.charAt(c) == "d" || s.charAt(c) == "f" || s.charAt(c) == "g" || s.charAt(c) == "h" || s.charAt(c) == "j" || s.charAt(c) == "k" || s.charAt(c) == "l" || s.charAt(c) == "m" || s.charAt(c) == "n" || s.charAt(c) == "p" || s.charAt(c) == "q" || s.charAt(c) == "r" || s.charAt(c) == "s" || s.charAt(c) == "t" || s.charAt(c) == "v" || s.charAt(c) == "w" || s.charAt(c) == "x" || s.charAt(c) == "y" || s.charAt(c) == "z" || s.charAt(c) == "B" || s.charAt(c) == "C" || s.charAt(c) == "D" || s.charAt(c) == "F" || s.charAt(c) == "G" || s.charAt(c) == "H" || s.charAt(c) == "J" || s.charAt(c) == "K" || s.charAt(c) == "L" || s.charAt(c) == "M" || s.charAt(c) == "N" || s.charAt(c) == "P" || s.charAt(c) == "Q" || s.charAt(c) == "R" || s.charAt(c) == "S" || s.charAt(c) == "T" || s.charAt(c) == "V" || s.charAt(c) == "W" || s.charAt(c) == "X" || s.charAt(c) == "Y" || s.charAt(c) == "Z") {
+                        cc++
+                    } else if (s.charAt(c) == "0" || s.charAt(c) == "1" || s.charAt(c) == "2" || s.charAt(c) == "3" || s.charAt(c) == "4" || s.charAt(c) == "5" || s.charAt(c) == "6" || s.charAt(c) == "7" || s.charAt(c) == "8" || s.charAt(c) == "9") {
+                        cd++
+                    } else {
+                        co++
+                    }
+                }
+
+                vog.innerHTML = cv
+                con.innerHTML = cc
+                dig.innerHTML = cd
+                out.innerHTML = co
+            }
+        </script>
+    </main>
+</body>
+
+</html>
